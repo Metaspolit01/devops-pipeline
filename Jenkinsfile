@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Metaspolit01/devops-pipeline.git'
+                git credentialsId: 'github-token', url: 'https://github.com/Metaspolit01/devops-pipeline.git'
+
             }
         }
 
